@@ -1,5 +1,6 @@
 {
-  "name": "react-empty",
+  "name": "todo-list",
+  "homepage": "https://yourusername.github.io/todo-list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
