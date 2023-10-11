@@ -1,0 +1,21 @@
+.modal-edit {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+
+  &__header {
+    background: rgb(67,71,22);
+    background: linear-gradient(0deg, rgba(67,71,22,1) 33%, rgba(228,216,76,0.966824644549763) 100%);
+  }
+  &__footer {
+    background: rgb(67,71,22);
+    background: linear-gradient(0deg, rgba(67,71,22,1) 33%, rgba(228,216,76,0.966824644549763) 100%);
+  }
+  &__body {
+    background: rgb(168,168,163);
+    background: radial-gradient(circle, rgba(168,168,163,1) 0%, rgba(170,169,160,1) 45%, rgba(228,216,76,0.966824644549763) 100%);
+  }
+}
