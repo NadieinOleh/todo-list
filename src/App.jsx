@@ -6,7 +6,6 @@ import ModalWindow from './app/components/ModalAdd/ModalAdd';
 
 import './App.scss';
 
-//add persist Redux
 
 function App() {
   const todos = useSelector(state => state.todos.todos);

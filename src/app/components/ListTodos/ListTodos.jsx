@@ -20,9 +20,6 @@ function ListTodos() {
 
   const filterTodo = useCallback(() => {
     switch (selected) {
-    case 'All':
-      return todos;
-
     case 'Active':
       return todos.filter((todo) => !todo.checked);
 

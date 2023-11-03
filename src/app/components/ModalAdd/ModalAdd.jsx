@@ -21,6 +21,12 @@ function ModalWindow() {
   const dispatch = useDispatch();
 
   const handleClose = () => {
+    setTodo((todo) => ({
+      ...todo,
+      title: '',
+      description: '',
+    }));
+
     if (!todo.title || !todo.description) {
       setShow(false);
 
@@ -40,19 +46,10 @@ function ModalWindow() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === 'title' || name === 'description') {
-      setTodo((todo) => ({
-        ...todo,
-        [name]: value,
-      }));
-    }
-
-    if (name === 'title') {
-      setTodo((todo) => ({
-        ...todo,
-        id: todo.id + 1,
-      }));
-    }
+    setTodo((todo) => ({
+      ...todo,
+      [name]: value,
+    }));
   };
 
   return (
@@ -79,7 +76,7 @@ function ModalWindow() {
               onChange={handleChange}
             />
           </InputGroup>
-    
+
           <InputGroup className="mb-3">
             <InputGroup.Text id="inputGroup-sizing-Description">
               Description
@@ -91,14 +88,13 @@ function ModalWindow() {
               onChange={handleChange}
             />
           </InputGroup>
-
         </Modal.Body>
 
         <Modal.Footer className="modal__header">
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          
+
           <Button variant="success" onClick={handleClose}>
             Save Changes
           </Button>

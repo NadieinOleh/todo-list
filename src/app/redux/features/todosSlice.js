@@ -9,6 +9,8 @@ const todosSlice = createSlice({
   initialState,
   reducers: {
     addTodos: (state, { payload }) => {
+      payload.id = state.todos.length + 1;
+
       state.todos.push(payload);
     },
     removeTodos: (state, { payload }) => {
